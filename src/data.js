@@ -24,6 +24,6 @@ export const toFilter = (arrayrickymorty, elementName, filterValue) => {
 };
 //Creamos la función para el buscador para el select
 export const search = (arrayrickymorty, characterName) => {
-  let arrayrickymortyTwo = arrayrickymorty.filter(element => element.name.includes(characterName));
+  let arrayrickymortyTwo = arrayrickymorty.filter(element => element.name.toLowerCase().includes(characterName));
   return arrayrickymortyTwo;
 };

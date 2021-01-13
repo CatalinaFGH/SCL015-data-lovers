@@ -2,7 +2,7 @@
 // it : es el caso. El ejemplo. Pueden ser varios casos
 // expect: se espera que... (evalúa la función)
 // toBe: que sea...
-import { toOrderAZ, toFilter } from "../src/data.js";
+import { toOrderAZ, toFilter, search } from "../src/data.js";
 import data from "../src/data/rickandmorty/rickandmorty.js";
 
 const rickandmorty = data.results;
@@ -178,7 +178,24 @@ const resultZA = [
     name: "Ghost in a Jar",
   },
 ];
-
+const charactersname = [
+  {
+    id: 333,
+    name: "Stair Goblin",
+  },
+  {
+    id: 266,
+    name: "Piece of Toast",
+  },
+  {
+    id: 157,
+    name: "Hole in the Wall Where the Men Can See it All",
+  },
+  {
+    id: 141,
+    name: "Ghost in a Jar",
+  },
+];
 describe("filters", () => {
   it("is a function", () => {
     expect(typeof toFilter).toBe("function");
@@ -206,5 +223,17 @@ describe("orderAZ", () => {
 
   it("returns orderAZ", () => {
     expect(toOrderAZ(toAZorder, 2)).toEqual(resultZA);
+  });
+});
+
+
+
+describe("searchBar", () => {
+  it("is a function", () => {
+    expect(typeof search).toBe("function");
+  });
+
+  it("search filter return charactersname", () => {
+    expect(search(rickandmorty,"Ghost")).toEqual(charactersname);
   });
 });
