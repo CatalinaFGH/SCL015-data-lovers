@@ -1,6 +1,6 @@
 # Proyecto Data Lovers: Rick y Morty
 
-## DEMO : [Producto](https://catalinafgh.github.io/SCL015-data-lovers/src)
+## DEMO : [Portal de Rick y Morty](https://catalinafgh.github.io/SCL015-data-lovers/src)
 
 ## Índice
 
